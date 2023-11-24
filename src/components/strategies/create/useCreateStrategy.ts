@@ -258,9 +258,9 @@ export const useCreateStrategy = () => {
   const {
     base: baseAddress,
     quote: quoteAddress,
-    strategySettings,
-    strategyDirection,
-    strategyType,
+    strategySettings = templateStrategy?.strategySettings,
+    strategyDirection = templateStrategy?.strategyDirection,
+    strategyType = templateStrategy?.strategyType,
   } = search;
   const { getTokenById } = useTokens();
 
